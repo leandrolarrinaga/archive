@@ -1,0 +1,19 @@
+{
+  "name": "web-site-archive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.14.37"
+  },
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.73",
+    "@types/aws-sdk": "^2.7.0",
+    "aws-sdk": "^2.876.0"
+  }
+}
