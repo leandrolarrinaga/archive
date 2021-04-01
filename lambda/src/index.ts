@@ -20,6 +20,8 @@ export async function handler(event: APIGatewayEvent): Promise<APIGatewayProxySt
             throw new Error("Missing Bucket");
 
         await backup(body.bucket);
+        
+        console.info(`${body.bucket} has been backed up in bucket ${Environment.BACKUP_BUCKET}`)
         response.statusCode = 200;
         response.body = "ok";
 
