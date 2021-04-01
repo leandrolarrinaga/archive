@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  web-site-archive
+
+Resources:
+  websiteCopyEngine:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: web-site-archive
+      Handler: build/index.handler
+      CodeUri: lambda
+      Role: arn:aws:iam::875827616634:role/service-role/test-01-role-q8cywewc
+      Runtime: nodejs14.x
+      Timeout: 30
+      MemorySize: 3008
+      Environment:
+        Variables:
+          BACKUP_BUCKET: ht-site-archive-dev
